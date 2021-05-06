@@ -5,7 +5,10 @@ RUN mkdir /hassio_bticino_smarter
 
 WORKDIR /hassio_bticino_smarter
 
-RUN apk add --update --no-cache \
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+RUN \
+    apk add --no-cache \
         bash \
         tzdata \
         python3 \
@@ -25,6 +28,14 @@ RUN cd /hassio_bticino_smarter/ && tar -xzf bticino_X8000_rest_api.tgz --strip 1
 
 RUN chmod a+x /hassio_bticino_smarter/run.sh
 
-RUN pip3 install Flask requests PyYAML apscheduler paho-mqtt Flask-HTTPAuth
+#RUN pip3 install Flask requests PyYAML apscheduler paho-mqtt Flask-HTTPAuth
+RUN \
+    apk add --no-cache \
+        Flask==1.1.1 \
+        requests==2.23.0 \
+        PyYAML==5.3 \
+        apscheduler==3.6.3 \
+        paho-mqtt==1.5.0 \
+        Flask-HTTPAuth==3.3.0 \
 
 CMD [ "/hassio_bticino_smarter/run.sh" ]
