@@ -1,0 +1,41 @@
+{
+  "name": "Bticino X8000",
+  "version": "0.7",
+  "url": "https://github.com/andrea-mattioli/mattiols_hassio_repository/tree/master/bticino_X8000",
+  "slug": "smarter_x8000",
+  "description": "Bticino Chronothermostats",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "services",
+  "boot": "auto",
+  "map": ["config:rw", "ssl:rw"],
+  "options": {
+  "client_id": "recived via email",
+  "client_secret": "recived via email",
+  "subscription_key": "subscription key",
+  "domain": "my home domain example.com",
+  "api_user": "chose your api user",
+  "api_pass": "chose your api password",
+  "mqtt_broker": "ip broker",
+  "mqtt_port": "mqtt broker port default:1883",
+  "mqtt_user": "your mqtt user",
+  "mqtt_pass": "your mqtt password",
+  "use_ssl": "True|False {False} for nginx proxy manager"
+  },
+  "schema": {
+  "client_id": "str",
+  "client_secret": "password",
+  "subscription_key": "password",
+  "domain": "str",
+  "api_user": "str",
+  "api_pass": "password",
+  "mqtt_broker": "str",
+  "mqtt_port": "port",
+  "mqtt_user": "str",
+  "mqtt_pass": "password",
+  "use_ssl": "bool"
+  },
+  "ports": {
+    "5588/tcp": 5588,
+    "80/tcp": null
+  }
+}
