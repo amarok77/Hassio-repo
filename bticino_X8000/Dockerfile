@@ -5,7 +5,7 @@ RUN mkdir /hassio_bticino_smarter
 
 WORKDIR /hassio_bticino_smarter
 
-RUN apk add --update --no-cache \
+RUN apk add --update --no-cache --network=host \
         bash \
         tzdata \
         python3 \
