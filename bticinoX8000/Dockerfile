@@ -13,7 +13,7 @@ RUN    apk add --no-cache \
 #           py3-pip \
 #           git \
 #           openssl \
-           curl \
+           curl 
 #           mosquitto-clients 
            
 #        && git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
