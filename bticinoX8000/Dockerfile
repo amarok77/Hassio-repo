@@ -16,17 +16,19 @@ RUN apk add --no-cache bash
 #           mosquitto-clients 
 COPY bticino.py /hassio_bticino_smarter
 COPY run.sh /hassio_bticino_smarter
-#        && git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
-#        && curl -s -o /hassio_bticino_smarter2/minion.jpg \
-#         "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"
-      
-#        && mv bticino_X8000_rest_api/* /hassio_bticino_smarter/ \
-#        && rm -rf bticino_X8000_rest_api; \
-    
-#COPY run.sh /hassio_bticino_smarter/
+COPY requirement.txt /hassio_bticino_smarter
+RUN mkdir /hassio_bticino_smarter/config
+COPY config.yml /hassio_bticino_smarter/config
+COPY mqtt_config.yml /hassio_bticino_smarter/config
+COPY smarter.json /hassio_bticino_smarter/config
+RUN mkdir /hassio_bticino_smarter/templates
+COPY file_conf.html /hassio_bticino_smarter/templates
+COPY index.html /hassio_bticino_smarter/templates
+COPY info.html /hassio_bticino_smarter/templates
+COPY package.yml.jinja2 /hassio_bticino_smarter/templates
 
-#RUN chmod a+x /hassio_bticino_smarter/run.sh
+RUN chmod a+x /hassio_bticino_smarter/run.sh
 
-#RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-#CMD [ "/hassio_bticino_smarter/run.sh" ]
+CMD [ "/hassio_bticino_smarter/run.sh" ]
