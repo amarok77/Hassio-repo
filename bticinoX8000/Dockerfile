@@ -8,13 +8,13 @@ WORKDIR /hassio_bticino_smarter
 
 RUN    apk add --no-cache \
            bash \
-           tzdata \
-           python3 \
-           py3-pip \
+#           tzdata \
+#           python3 \
+#           py3-pip \
 #           git \
-           openssl \
+#           openssl \
  #          curl \
-           mosquitto-clients 
+#           mosquitto-clients 
            
 #        && git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
 #RUN      curl -s -o /hassio_bticino_smarter/bticino.py \
