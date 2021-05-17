@@ -8,12 +8,12 @@ WORKDIR /hassio_bticino_smarter
 
 RUN apk add --no-cache bash
 #           tzdata \
-#           python3 \
-#           py3-pip \
+           python3 \
+           py3-pip \
 #           git \
 #           openssl 
 #           curl 
-#           mosquitto-clients 
+           mosquitto-clients 
 COPY bticino.py /hassio_bticino_smarter
 COPY run.sh /hassio_bticino_smarter
 COPY requirements.txt /hassio_bticino_smarter
