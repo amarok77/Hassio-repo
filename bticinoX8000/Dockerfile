@@ -16,7 +16,7 @@ RUN apk add --no-cache bash
 #           mosquitto-clients 
 COPY bticino.py /hassio_bticino_smarter
 COPY run.sh /hassio_bticino_smarter
-COPY requirement.txt /hassio_bticino_smarter
+COPY requirements.txt /hassio_bticino_smarter
 RUN mkdir /hassio_bticino_smarter/config
 COPY config.yml /hassio_bticino_smarter/config
 COPY mqtt_config.yml /hassio_bticino_smarter/config
