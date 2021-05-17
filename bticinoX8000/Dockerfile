@@ -18,14 +18,14 @@ COPY bticino.py /hassio_bticino_smarter
 COPY run.sh /hassio_bticino_smarter
 COPY requirements.txt /hassio_bticino_smarter
 RUN mkdir /hassio_bticino_smarter/config
-COPY config.yml /hassio_bticino_smarter/config
-COPY mqtt_config.yml /hassio_bticino_smarter/config
-COPY smarter.json /hassio_bticino_smarter/config
+COPY config/config.yml /hassio_bticino_smarter/config
+COPY config/mqtt_config.yml /hassio_bticino_smarter/config
+COPY config/smarter.json /hassio_bticino_smarter/config
 RUN mkdir /hassio_bticino_smarter/templates
-COPY file_conf.html /hassio_bticino_smarter/templates
-COPY index.html /hassio_bticino_smarter/templates
-COPY info.html /hassio_bticino_smarter/templates
-COPY package.yml.jinja2 /hassio_bticino_smarter/templates
+COPY templates/file_conf.html /hassio_bticino_smarter/templates
+COPY templates/index.html /hassio_bticino_smarter/templates
+COPY templates/info.html /hassio_bticino_smarter/templates
+COPY templates/package.yml.jinja2 /hassio_bticino_smarter/templates
 
 RUN chmod a+x /hassio_bticino_smarter/run.sh
 
