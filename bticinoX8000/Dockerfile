@@ -2,9 +2,9 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 
-#RUN mkdir /hassio_bticino_smarter2
+RUN mkdir /hassio_bticino_smarter2
 #RUN chmod a=rw /hassio_bticino_smarter
-#WORKDIR /hassio_bticino_smarter
+WORKDIR /hassio_bticino_smarter2
 
 RUN apk add --no-cache bash
 #           tzdata \
