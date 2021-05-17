@@ -1,7 +1,7 @@
 {
   "name": "Bticino X8000 Plugin",
   "version": "2.6",
-  "url": "https://github.com/amarok77/Hassio-repo/tree/master/bticino",
+  "url": "https://github.com/amarok77/Hassio-repo/bticinoX8000",
   "slug": "smarter_x8000",
   "description": "Bticino Chronothermostats",
   "arch": ["armhf", "armv7"],
