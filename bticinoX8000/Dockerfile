@@ -14,8 +14,8 @@ RUN apk add --no-cache bash
 #           openssl 
 #           curl 
 #           mosquitto-clients 
-COPY bticino.py
-COPY run.sh
+COPY bticino.py /
+COPY run.sh /
 #        && git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
 #        && curl -s -o /hassio_bticino_smarter2/minion.jpg \
 #         "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"
