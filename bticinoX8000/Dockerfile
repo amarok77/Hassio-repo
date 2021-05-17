@@ -6,18 +6,17 @@ RUN mkdir /hassio_bticino_smarter
 #RUN chmod a=rw /hassio_bticino_smarter
 #WORKDIR /hassio_bticino_smarter
 
-RUN    apk add --no-cache \
-           bash \
+RUN apk add --no-cache bash openssl \
 #           tzdata \
 #           python3 \
 #           py3-pip \
 #           git \
-           openssl 
+#           openssl 
 #           curl 
 #           mosquitto-clients 
            
 #        && git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
-RUN      curl -s -o /hassio_bticino_smarter/minion.jpg \
+         && curl -s -o /hassio_bticino_smarter/minion.jpg \
          "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"
       
 #        && mv bticino_X8000_rest_api/* /hassio_bticino_smarter/ \
