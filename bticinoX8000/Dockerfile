@@ -3,8 +3,8 @@ FROM $BUILD_FROM
 
 
 RUN mkdir /hassio_bticino_smarter
-RUN chmod a=rw /hassio_bticino_smarter
-# WORKDIR /hassio_bticino_smarter
+#RUN chmod a=rw /hassio_bticino_smarter
+WORKDIR /hassio_bticino_smarter
 
 RUN    apk add --no-cache \
            bash \
