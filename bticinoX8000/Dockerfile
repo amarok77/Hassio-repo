@@ -2,9 +2,9 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 
-RUN mkdir /hassio_bticino_smarter2
+RUN mkdir /hassio_bticino_smarter
 #RUN chmod a=rw /hassio_bticino_smarter
-WORKDIR /hassio_bticino_smarter2
+WORKDIR /hassio_bticino_smarter
 
 RUN apk add --no-cache bash
 #           tzdata \
@@ -14,8 +14,8 @@ RUN apk add --no-cache bash
 #           openssl 
 #           curl 
 #           mosquitto-clients 
-COPY bticino.py /
-COPY run.sh /
+COPY bticino.py /hassio_bticino_smarter
+COPY run.sh /hassio_bticino_smarter
 #        && git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
 #        && curl -s -o /hassio_bticino_smarter2/minion.jpg \
 #         "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"
