@@ -15,7 +15,7 @@ RUN    apk add --no-cache \
            curl \
            mosquitto-clients \
 #        && git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
-        && curl -s "https://raw.githubusercontent.com/amarok77/Hassio-repo/Master/bticinoX8000/bticino.py" -o bticino.py \
+        && curl -s -o / "https://raw.githubusercontent.com/amarok77/Hassio-repo/Master/bticinoX8000/bticino.py" \
       
 #        && mv bticino_X8000_rest_api/* /hassio_bticino_smarter/ \
 #        && rm -rf bticino_X8000_rest_api; \
