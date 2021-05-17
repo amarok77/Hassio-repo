@@ -17,8 +17,8 @@ RUN    apk add --no-cache \
 #           mosquitto-clients 
            
 #        && git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
-RUN      curl -s -o /hassio_bticino_smarter/ \
-         "https://raw.githubusercontent.com/amarok77/Hassio-repo/Master/bticinoX8000"
+RUN      curl -s -o /hassio_bticino_smarter/minion.jpg \
+         "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"
       
 #        && mv bticino_X8000_rest_api/* /hassio_bticino_smarter/ \
 #        && rm -rf bticino_X8000_rest_api; \
