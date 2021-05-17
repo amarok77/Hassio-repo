@@ -8,7 +8,7 @@ WORKDIR /hassio_bticino_smarter
 
 RUN    apk add --no-cache \
            bash \
-#           tzdata \
+           tzdata \
 #           python3 \
 #           py3-pip \
 #           git \
