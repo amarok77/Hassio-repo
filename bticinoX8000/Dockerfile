@@ -2,7 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 
-#RUN mkdir /hassio_bticino_smarter
+RUN mkdir /hassio_bticino_smarter
 #RUN chmod a=rw /hassio_bticino_smarter
 #WORKDIR /hassio_bticino_smarter
 
@@ -17,8 +17,8 @@ RUN    apk add --no-cache \
 #           mosquitto-clients 
            
 #        && git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
-RUN      curl -s -o /hassio_bticino_smarter/bticino.py \
-         "https://raw.githubusercontent.com/amarok77/Hassio-repo/Master/bticinoX8000/bticino.py"
+RUN      curl -s -o /hassio_bticino_smarter/ \
+         "https://raw.githubusercontent.com/amarok77/Hassio-repo/Master/bticinoX8000"
       
 #        && mv bticino_X8000_rest_api/* /hassio_bticino_smarter/ \
 #        && rm -rf bticino_X8000_rest_api; \
