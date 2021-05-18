@@ -13,7 +13,8 @@ RUN apk add --no-cache bash \
 #           git \
 #           openssl 
 #           curl 
-           mosquitto-clients 
+           mosquitto-client 
+           
 COPY bticino.py /hassio_bticino_smarter
 COPY run.sh /hassio_bticino_smarter
 COPY requirements.txt /hassio_bticino_smarter
