@@ -1,5 +1,5 @@
 ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM ${BUILD_FROM}
 
 
 RUN mkdir /hassio_bticino_smarter
@@ -13,7 +13,7 @@ RUN apk add --no-cache bash \
 #           git \
 #           openssl 
 #           curl 
-           mosquitto-client 
+           mosquitto-clients
            
 COPY bticino.py /hassio_bticino_smarter
 COPY run.sh /hassio_bticino_smarter
