@@ -13,7 +13,7 @@
   "panel_icon": "mdi:thermometer",
   "startup": "services",
   "boot": "auto",
-  "map": ["config:rw", "ssl:rw"],
+  "map": ["config", "ssl"],
   "webui": "http://[HOST]:[PORT:5588]",
   "options": {
     "client_id": "recived via email",
