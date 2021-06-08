@@ -1,9 +1,0 @@
-*.pyc
-*.dat
-*.id
-*pycache*
-.pytest_cache/*
-htmlcov/*
-.mypy_cache/*
-*drive_creds*
-*.egg-info
