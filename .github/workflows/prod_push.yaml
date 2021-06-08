@@ -28,4 +28,4 @@ jobs:
       with:
         args: |
           --all \
-          --target dev/hassio-google-drive-backup
+          --target dev/bticino-x8000
