@@ -6,8 +6,4 @@
 htmlcov/*
 .mypy_cache/*
 *drive_creds*
-dev/backup/*.tar
-.vscode/tags
-dev/error.py
-dev/data/retained.json
 *.egg-info
