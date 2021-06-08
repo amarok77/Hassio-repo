@@ -5,8 +5,9 @@ COPY . /bticino-x8000
 RUN chmod +x addon_deps.sh
 RUN ./addon_deps.sh
 RUN pip3 install .
-COPY config.json /usr/local/lib/python3.8/site-packages/config.json \
-&& git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
+COPY config.json /usr/local/lib/python3.8/site-packages/config.json
+
+RUN git clone -b v2 https://github.com/andrea-mattioli/bticino_X8000_rest_api.git \
 && mv bticino_X8000_rest_api/* /bticino-x8000/ \
 && rm -rf bticino_X8000_rest_api;
 
