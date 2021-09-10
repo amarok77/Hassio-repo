@@ -28,6 +28,19 @@
     "legrand_user": "your Legrand Email for 32bit installation set None",
     "legrand_pass": "your Legrand password for 32bit installation set None"
   },
+    "schema": {
+    "client_id": "str",
+    "client_secret": "password",
+    "subscription_key": "password",
+    "domain": "str",
+    "haip": "str",
+    "mqtt_broker": "str",
+    "mqtt_port": "port",
+    "mqtt_user": "str",
+    "mqtt_pass": "password",
+    "legrand_user": "str",
+    "legrand_pass": "password"
+  },
   "ports": {
     "5588": 5588
   }
